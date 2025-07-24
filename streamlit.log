@@ -1,0 +1,38 @@
+nohup: ignoring input
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8001
+  Network URL: http://10.3.0.7:8001
+  External URL: http://172.200.58.63:8001
+
+Task exception was never retrieved
+future: <Task finished name='Task-1667' coro=<<async_generator_athrow without __name__>()> exception=RuntimeError('Attempted to exit cancel scope in a different task than it was entered in')>
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/shsysadmin/algolia/algoenv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/shsysadmin/algolia/algoenv/lib/python3.12/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/home/shsysadmin/algolia/algoenv/lib/python3.12/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+    async with (
+  File "/home/shsysadmin/algolia/algoenv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shsysadmin/algolia/algoenv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in

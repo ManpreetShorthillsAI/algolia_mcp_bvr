@@ -1,0 +1,3 @@
+[submodule "mcp-node"]
+	path = mcp-node
+	url = https://github.com/ManpreetShorthillsAI/mcp-node.git
